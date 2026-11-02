@@ -1,0 +1,1011 @@
+<title>Runner's Knee Guide</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="A short, flexible exercise and running plan for pain at the back-outer corner of the knee in runners, with beginner instructions and when to get it checked.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@600;700&display=swap">
+<style>
+/* Layout: one calm column, field-guide style. Summary first, then plan, running, exercises, checks.
+   Detail lives behind native disclosures so the page reads in a minute and teaches in fifteen. */
+:root{
+  --bg:#f3f5f1;
+  --surface:#ffffff;
+  --sunk:#e9eee6;
+  --ink:#18211c;
+  --muted:#55625a;
+  --line:#d8dfd4;
+  --accent:#2b6547;
+  --accent-ink:#ffffff;
+  --accent-soft:#e1ece4;
+  --ok:#256f43;
+  --ok-soft:#e0f0e5;
+  --warn:#8a5600;
+  --warn-soft:#fbeed6;
+  --stop:#ad2a22;
+  --stop-soft:#fbe3df;
+  --zone-ok:#64b081;
+  --zone-warn:#e2a23a;
+  --zone-stop:#d45b50;
+  --zone-ink:#14201a;
+  --display:"Barlow Condensed","Arial Narrow","Roboto Condensed",sans-serif;
+  --body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --radius:14px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#111613; --surface:#18201b; --sunk:#202a23; --ink:#e5ebe6; --muted:#9ba9a0; --line:#2c3730;
+    --accent:#86c9a2; --accent-ink:#0c1a12; --accent-soft:#1c3026;
+    --ok:#86c9a2; --ok-soft:#183020; --warn:#f0b65c; --warn-soft:#33281a; --stop:#ff8f85; --stop-soft:#3a1d1b;
+    --zone-ok:#4e9a6b; --zone-warn:#c98d2e; --zone-stop:#c4544a;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111613; --surface:#18201b; --sunk:#202a23; --ink:#e5ebe6; --muted:#9ba9a0; --line:#2c3730;
+  --accent:#86c9a2; --accent-ink:#0c1a12; --accent-soft:#1c3026;
+  --ok:#86c9a2; --ok-soft:#183020; --warn:#f0b65c; --warn-soft:#33281a; --stop:#ff8f85; --stop-soft:#3a1d1b;
+  --zone-ok:#4e9a6b; --zone-warn:#c98d2e; --zone-stop:#c4544a;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:var(--body); font-size:1.0625rem; line-height:1.6;
+  -webkit-text-size-adjust:100%;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+}
+a{color:var(--accent); text-underline-offset:2px}
+:focus-visible{outline:3px solid var(--accent); outline-offset:2px; border-radius:6px}
+strong{font-weight:700}
+p{margin:0}
+ul,ol{margin:0}
+
+.wrap{max-width:42rem; margin:0 auto; padding-block:1.75rem 3rem; display:flex; flex-direction:column; gap:2.5rem}
+
+h1,h2,h3{font-family:var(--display); font-weight:700; line-height:1.08; margin:0; text-wrap:balance; letter-spacing:.005em}
+h1{font-size:clamp(2.4rem, 9vw, 3.2rem)}
+h2{font-size:1.85rem}
+h3{font-size:1.45rem}
+h4{margin:0; font-size:.78rem; text-transform:uppercase; letter-spacing:.09em; color:var(--muted); font-weight:700}
+.kicker{font-size:.78rem; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); font-weight:700}
+.muted{color:var(--muted)}
+.small{font-size:.92rem}
+
+/* ---------- header ---------- */
+.top{display:flex; flex-direction:column; gap:.7rem}
+.lede{font-size:1.1rem; color:var(--muted); max-width:36rem}
+.toc{display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.4rem}
+.toc a{
+  text-decoration:none; color:var(--ink); background:var(--surface);
+  border:1px solid var(--line); border-radius:999px; padding:.45rem .9rem;
+  font-size:.92rem; font-weight:700; min-height:40px; display:inline-flex; align-items:center;
+}
+.toc a:hover{border-color:var(--accent)}
+
+/* ---------- section scaffolding ---------- */
+section{display:flex; flex-direction:column; gap:1rem; scroll-margin-top:1rem}
+.sec-intro{color:var(--muted)}
+.stack{display:flex; flex-direction:column; gap:.75rem}
+
+/* ---------- the 1-minute version ---------- */
+.quick{background:var(--accent-soft); border-radius:var(--radius); padding:1.35rem 1.25rem; gap:1.1rem}
+.quick .what{font-size:1.05rem}
+ol.prio{list-style:none; padding:0; display:flex; flex-direction:column; gap:.85rem; counter-reset:p}
+ol.prio li{counter-increment:p; display:grid; grid-template-columns:2.1rem 1fr; gap:.75rem; align-items:start}
+ol.prio li::before{
+  content:counter(p); width:2.1rem; height:2.1rem; border-radius:50%;
+  background:var(--accent); color:var(--accent-ink); font-family:var(--display); font-size:1.25rem; font-weight:700;
+  display:flex; align-items:center; justify-content:center;
+}
+ol.prio .when{display:block; font-family:var(--display); font-size:1.2rem; font-weight:700; line-height:1.2}
+.quick .also{border-top:1px solid color-mix(in srgb, var(--accent) 25%, transparent); padding-top:.9rem; display:flex; flex-direction:column; gap:.5rem}
+
+/* ---------- week tiers ---------- */
+.tiers{display:grid; grid-template-columns:repeat(auto-fit, minmax(11.5rem, 1fr)); gap:.75rem}
+.tier{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:1rem; display:flex; flex-direction:column; gap:.45rem; min-width:0}
+.tier .name{font-family:var(--display); font-size:1.3rem; font-weight:700}
+.tier .meta{font-variant-numeric:tabular-nums; font-weight:700; color:var(--accent)}
+.tier.pick{border-color:var(--accent); box-shadow:0 0 0 1px var(--accent) inset}
+ul.dots{padding-left:1.2rem; display:flex; flex-direction:column; gap:.4rem}
+
+/* ---------- stages (a real sequence) ---------- */
+ol.stages{list-style:none; padding:0; display:flex; flex-direction:column; gap:.75rem; counter-reset:st}
+ol.stages > li{
+  counter-increment:st; background:var(--surface); border:1px solid var(--line); border-radius:12px;
+  padding:1rem 1rem 1rem 3.4rem; position:relative; display:flex; flex-direction:column; gap:.4rem;
+}
+ol.stages > li::before{
+  content:counter(st); position:absolute; left:1rem; top:1rem; width:1.7rem; height:1.7rem; border-radius:50%;
+  border:2px solid var(--accent); color:var(--accent); font-family:var(--display); font-weight:700;
+  display:flex; align-items:center; justify-content:center;
+}
+.stage-name{font-family:var(--display); font-size:1.3rem; font-weight:700}
+.kv{display:grid; grid-template-columns:auto 1fr; gap:.25rem .75rem}
+.kv dt{font-weight:700; color:var(--muted); font-size:.92rem}
+.kv dd{margin:0; min-width:0}
+
+/* ---------- pain scale ---------- */
+.scale-box{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:1rem; display:flex; flex-direction:column; gap:.8rem}
+.scale{display:grid; grid-template-columns:repeat(11, 1fr); gap:3px}
+.scale span{
+  text-align:center; font-weight:700; font-variant-numeric:tabular-nums; padding:.45rem 0; border-radius:5px;
+  font-size:.92rem; color:var(--zone-ink);
+}
+.z-ok{background:var(--zone-ok)} .z-warn{background:var(--zone-warn)} .z-stop{background:var(--zone-stop)}
+.legend{display:grid; grid-template-columns:repeat(auto-fit, minmax(10rem, 1fr)); gap:.5rem}
+.legend div{display:grid; grid-template-columns:.9rem 1fr; gap:.55rem; align-items:start; font-size:.95rem}
+.legend i{width:.9rem; height:.9rem; border-radius:3px; margin-top:.3rem}
+
+/* ---------- generic tinted notes ---------- */
+.note{border-radius:10px; padding:.85rem 1rem; display:flex; flex-direction:column; gap:.35rem}
+.note.ok{background:var(--ok-soft)}
+.note.warn{background:var(--warn-soft)}
+.note.plain{background:var(--sunk)}
+.note h4{color:var(--ink)}
+.note.ok h4{color:var(--ok)}
+.note.warn h4{color:var(--warn)}
+
+/* ---------- disclosures ---------- */
+details{border-radius:12px}
+summary{cursor:pointer; list-style:none; display:flex; align-items:center; justify-content:space-between; gap:1rem; font-weight:700}
+summary::-webkit-details-marker{display:none}
+summary::after{
+  content:""; width:.6rem; height:.6rem; flex:0 0 auto; margin-right:.2rem;
+  border-right:2.5px solid currentColor; border-bottom:2.5px solid currentColor; transform:rotate(45deg) translateY(-2px);
+  transition:transform .15s ease;
+}
+details[open] > summary::after{transform:rotate(-135deg) translateY(-2px)}
+details.box{background:var(--surface); border:1px solid var(--line)}
+details.box > summary{padding:.95rem 1rem; min-height:52px}
+details.box > .body{padding:0 1rem 1.1rem; display:flex; flex-direction:column; gap:.85rem}
+
+/* ---------- dose glossary ---------- */
+.gloss{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:1rem; display:flex; flex-direction:column; gap:.75rem}
+.gloss dl{margin:0; display:grid; grid-template-columns:minmax(5.2rem, auto) 1fr; gap:.55rem 1rem}
+.gloss dt{font-weight:700}
+.gloss dd{margin:0; min-width:0}
+.gloss .eg{font-variant-numeric:tabular-nums; background:var(--sunk); border-radius:6px; padding:.05rem .4rem; white-space:nowrap}
+
+/* ---------- exercise cards ---------- */
+.ex{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; scroll-margin-top:1rem}
+.ex-head{padding:1.15rem 1.1rem 1rem; display:flex; flex-direction:column; gap:.65rem}
+.ex-top{display:flex; align-items:center; gap:.6rem; flex-wrap:wrap}
+.ex-num{font-family:var(--display); font-weight:700; font-size:1rem; color:var(--muted); font-variant-numeric:tabular-nums}
+.tag{font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:.2rem .55rem; border-radius:999px}
+.tag.core{background:var(--accent); color:var(--accent-ink)}
+.tag.opt{background:var(--sunk); color:var(--muted); border:1px solid var(--line)}
+.tag.cond{background:var(--warn-soft); color:var(--warn)}
+.why{color:var(--muted)}
+.dose{display:flex; flex-wrap:wrap; gap:.5rem; margin:0}
+.dose div{background:var(--sunk); border-radius:10px; padding:.45rem .7rem; min-width:0}
+.dose dt{font-size:.68rem; text-transform:uppercase; letter-spacing:.09em; color:var(--muted); font-weight:700}
+.dose dd{margin:0; font-weight:700; font-variant-numeric:tabular-nums}
+.ex details.how{border-radius:0; border-top:1px solid var(--line)}
+.ex details.how > summary{padding:.9rem 1.1rem; color:var(--accent); min-height:52px}
+.how-body{padding:0 1.1rem 1.2rem; display:flex; flex-direction:column; gap:1rem}
+.how-body .part{display:flex; flex-direction:column; gap:.45rem}
+ol.steps{padding:0; list-style:none; counter-reset:s; display:flex; flex-direction:column; gap:.6rem}
+ol.steps li{counter-increment:s; display:grid; grid-template-columns:1.75rem 1fr; gap:.6rem}
+ol.steps li::before{
+  content:counter(s); width:1.6rem; height:1.6rem; border-radius:50%; background:var(--sunk);
+  font-weight:700; font-size:.85rem; display:flex; align-items:center; justify-content:center; margin-top:.05rem;
+}
+ul.mist{padding-left:1.2rem; display:flex; flex-direction:column; gap:.4rem}
+ul.mist li::marker{color:var(--stop)}
+.eh{display:grid; grid-template-columns:repeat(auto-fit, minmax(13rem, 1fr)); gap:.6rem}
+.eh > div{background:var(--sunk); border-radius:10px; padding:.8rem .9rem; display:flex; flex-direction:column; gap:.35rem; min-width:0}
+.eh ul{padding-left:1.1rem; display:flex; flex-direction:column; gap:.3rem}
+
+/* video banner at the bottom of a card */
+.video{
+  display:flex; align-items:center; justify-content:center; gap:.6rem;
+  min-height:54px; padding:.85rem 1rem; border-top:1px solid var(--line);
+  background:var(--sunk); color:var(--ink); text-decoration:none; font-weight:700;
+}
+.video:hover{background:var(--accent-soft)}
+.video .play{
+  width:1.6rem; height:1.6rem; border-radius:50%; background:var(--stop); flex:0 0 auto;
+  display:flex; align-items:center; justify-content:center;
+}
+.video .play::before{content:""; border-left:.55rem solid var(--surface); border-top:.35rem solid transparent; border-bottom:.35rem solid transparent; margin-left:.12rem}
+.video .ext{font-weight:400; color:var(--muted); font-size:.85rem}
+.inline-video{border:1px solid var(--line); border-radius:12px}
+
+/* hold timer */
+.timer{background:var(--accent-soft); border-radius:10px; padding:.85rem .9rem; display:flex; flex-wrap:wrap; align-items:center; gap:.6rem .75rem}
+.timer .t-label{font-weight:700; flex:1 1 100%}
+.timer .t-out{font-family:var(--display); font-size:2rem; font-weight:700; font-variant-numeric:tabular-nums; min-width:5.5rem}
+.timer .t-phase{font-size:.85rem; color:var(--muted); flex:1 1 auto}
+.timer button{
+  font:inherit; font-weight:700; border-radius:999px; padding:.5rem 1rem; min-height:44px; cursor:pointer;
+  border:1px solid var(--accent); background:var(--surface); color:var(--accent);
+}
+.timer button.t-stop{background:var(--accent); color:var(--accent-ink)}
+.timer.running .t-out{color:var(--accent)}
+
+/* ---------- something else ---------- */
+.alt{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:1rem; display:flex; flex-direction:column; gap:.5rem}
+.alt .label{font-family:var(--display); font-size:1.25rem; font-weight:700}
+.alt .row{display:grid; grid-template-columns:6.2rem 1fr; gap:.75rem}
+.alt .row b{font-size:.82rem; text-transform:uppercase; letter-spacing:.07em; color:var(--muted); padding-top:.15rem}
+
+/* ---------- escalation ---------- */
+.flag{border-radius:12px; padding:1.05rem 1.1rem; display:flex; flex-direction:column; gap:.6rem}
+.flag.now{background:var(--stop-soft)}
+.flag.soon{background:var(--warn-soft)}
+.flag h3{font-size:1.35rem}
+.flag.now h3{color:var(--stop)}
+.flag.soon h3{color:var(--warn)}
+.flag ul{padding-left:1.2rem; display:flex; flex-direction:column; gap:.4rem}
+
+/* ---------- references ---------- */
+ul.refs{padding-left:1.1rem; display:flex; flex-direction:column; gap:.6rem; font-size:.94rem}
+ul.refs .n{display:block; color:var(--muted); font-size:.88rem}
+
+footer{border-top:1px solid var(--line); padding-top:1.25rem; display:flex; flex-direction:column; gap:.5rem; color:var(--muted); font-size:.92rem}
+
+@media (prefers-reduced-motion: reduce){ *{transition:none!important; animation:none!important} }
+@media (max-width:380px){
+  .alt .row{grid-template-columns:1fr; gap:.1rem}
+  .gloss dl{grid-template-columns:1fr; gap:.1rem .5rem}
+  .gloss dd{margin-bottom:.45rem}
+}
+</style>
+
+<main class="wrap">
+
+<header class="top">
+  <p class="kicker">For runners &middot; v01 &middot; 03/11/2026</p>
+  <h1>Runner's Knee Guide</h1>
+  <p class="lede">Pain at the back-outer corner of the knee: a short, flexible plan you can fit around your running. Read the summary in a minute. Tap into any section when you have more time.</p>
+  <nav class="toc" aria-label="Sections">
+    <a href="#quick">1-minute version</a>
+    <a href="#week">Your week</a>
+    <a href="#running">Running with it</a>
+    <a href="#exercises">Exercises</a>
+    <a href="#else">Something else?</a>
+    <a href="#checked">Get it checked</a>
+    <a href="#more">More detail</a>
+  </nav>
+</header>
+
+<!-- ======================= 1-MINUTE VERSION ======================= -->
+<section id="quick" class="quick" aria-labelledby="h-quick">
+  <h2 id="h-quick">The 1-minute version</h2>
+  <p class="what">When the pain sits at the back-outer corner of the knee, the most likely cause is an irritated <strong>popliteus tendon</strong>: a small muscle and tendon there that works hard on downhills. Sore tendons get better with <strong>steady, gradually heavier exercise</strong>, not complete rest. Most people improve within 4 to 6 weeks, with full benefit by about 12 weeks.</p>
+  <ol class="prio">
+    <li><div><span class="when">Every run: follow the pain rule</span>Pain up to 3 out of 10 is fine. It should settle by the next morning. <a href="#pain-rule">How the rule works</a></div></li>
+    <li><div><span class="when">On hills: go easy downhill</span>Uphills are usually fine. On steep downhills, take short quick steps or walk. <a href="#hills">Hill tips</a></div></li>
+    <li><div><span class="when">2 to 3 times a week: 12 minutes</span>Three exercises: wall sit, band shin turn, side step-down. Any days that suit. <a href="#exercises">See the exercises</a></div></li>
+  </ol>
+  <div class="also">
+    <p><strong>More time?</strong> Add two optional exercises (about 6 extra minutes). <a href="#week">Weekly options</a></p>
+    <p><strong>Get it checked</strong> if the knee swells, locks, gives way, hurts at night, or isn't clearly better after 6 to 8 weeks. <a href="#checked">Full list</a></p>
+  </div>
+</section>
+
+<!-- ======================= YOUR WEEK ======================= -->
+<section id="week" aria-labelledby="h-week">
+  <h2 id="h-week">Your week</h2>
+  <p class="sec-intro">Pick the option that fits the week you're having. A busy week on the minimum still counts.</p>
+
+  <div class="tiers">
+    <div class="tier">
+      <span class="name">Busy week</span>
+      <span class="meta">2 sessions &middot; ~10 min</span>
+      <p>Exercises 1, 2 and 3.</p>
+    </div>
+    <div class="tier pick">
+      <span class="name">Normal week</span>
+      <span class="meta">3 sessions &middot; ~12 min</span>
+      <p>Exercises 1, 2 and 3. Add exercise 5 if you've had ITB or hip pain before.</p>
+    </div>
+    <div class="tier">
+      <span class="name">Spare time</span>
+      <span class="meta">3 sessions &middot; ~18 min</span>
+      <p>All five exercises. Optional extra: 2 &times; 30 s wall sit before hilly runs.</p>
+    </div>
+  </div>
+
+  <details class="box">
+    <summary>Fitting it around your runs</summary>
+    <div class="body">
+      <ul class="dots">
+        <li><strong>Any days work.</strong> Try to leave a day between sessions. Two days in a row now and then is fine.</li>
+        <li><strong>Best time:</strong> straight after an easy run, or on a day you don't run.</li>
+        <li><strong>Avoid</strong> a hard session the evening before a long or hilly run if your legs already feel heavy.</li>
+        <li><strong>Missed one?</strong> Skip it. Don't double up the next day.</li>
+        <li><strong>Sore day</strong> (worse than usual that morning, or above 3/10): do the <em>Settle</em> version only. Holds are gentle enough to do even on sore days.</li>
+        <li><strong>Do both legs every time,</strong> starting with the less sore leg so you learn the movement first.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Three stages</h3>
+  <ol class="stages">
+    <li>
+      <span class="stage-name">Settle</span>
+      <dl class="kv">
+        <dt>When</dt><dd>Weeks 1 to 2, and any time it flares.</dd>
+        <dt>Exercises</dt><dd>The <em>Settle</em> dose on each card: mostly holds.</dd>
+        <dt>Running</dt><dd>Keep running within the pain rule. Walk steep downhills.</dd>
+      </dl>
+    </li>
+    <li>
+      <span class="stage-name">Build</span>
+      <dl class="kv">
+        <dt>When</dt><dd>From about week 2 or 3, to week 12.</dd>
+        <dt>Exercises</dt><dd>The <em>Build</em> dose: slow moving reps, then add weight with a backpack.</dd>
+        <dt>Running</dt><dd>Normal running within the pain rule. Gentle downhills only.</dd>
+      </dl>
+    </li>
+    <li>
+      <span class="stage-name">Hills back</span>
+      <dl class="kv">
+        <dt>When</dt><dd>From about week 4, once Build feels comfortable.</dd>
+        <dt>Exercises</dt><dd>Keep the Build dose going.</dd>
+        <dt>Running</dt><dd>Bring steeper downhills back gradually. <a href="#downhill-return">How</a></dd>
+      </dl>
+    </li>
+  </ol>
+  <p class="note plain"><span><strong>Move to the next stage when:</strong> for a full week, the exercises stay at 3/10 or less and the knee is no worse the next morning.</span></p>
+</section>
+
+<!-- ======================= RUNNING ======================= -->
+<section id="running" aria-labelledby="h-running">
+  <h2 id="h-running">Running with it</h2>
+  <p class="sec-intro">You usually don't need to stop running. Tendons need load to heal. The aim is to keep the load at a level the knee tolerates.</p>
+
+  <div class="scale-box" id="pain-rule">
+    <h3>The pain rule</h3>
+    <p>Rate the knee pain from 0 (none) to 10 (worst imaginable), during and after running or exercise.</p>
+    <div class="scale" role="img" aria-label="Pain scale from 0 to 10. 0 to 3 is fine, 4 to 5 means ease off, 6 to 10 means stop that activity for today.">
+      <span class="z-ok">0</span><span class="z-ok">1</span><span class="z-ok">2</span><span class="z-ok">3</span>
+      <span class="z-warn">4</span><span class="z-warn">5</span>
+      <span class="z-stop">6</span><span class="z-stop">7</span><span class="z-stop">8</span><span class="z-stop">9</span><span class="z-stop">10</span>
+    </div>
+    <div class="legend">
+      <div><i class="z-ok"></i><span><strong>0 to 3: fine.</strong> You notice it but it doesn't change how you move. Carry on.</span></div>
+      <div><i class="z-warn"></i><span><strong>4 to 5: ease off.</strong> Slow down, walk the downhills, shorten the run.</span></div>
+      <div><i class="z-stop"></i><span><strong>6 or more: stop</strong> that activity for today.</span></div>
+    </div>
+    <p class="note ok"><span><strong>Next-morning check:</strong> the knee should be back to its usual level by the next morning. If it's worse, make the next few days easier.</span></p>
+  </div>
+
+  <div class="stack" id="hills">
+    <h3>Hills</h3>
+    <p>Downhills are the main stress for this part of the knee (and for the ITB on the outer thigh). Uphills are usually fine.</p>
+    <ul class="dots">
+      <li><strong>Plan the route direction</strong> so you climb the steepest sections and come down the gentler ones.</li>
+      <li><strong>Walk steep descents</strong> for now. It costs seconds and can save weeks.</li>
+      <li><strong>Going downhill:</strong> short, quick, light steps. Land with your foot under your hips, not out in front. Lean very slightly forward from the ankles rather than leaning back. Keep the knee a little bent when you land.</li>
+      <li><strong>Avoid sloped road edges.</strong> The slope twists the knee on every step. Use the footpath, or switch sides on quiet roads.</li>
+      <li><strong>Treadmill access?</strong> A flat or uphill treadmill run removes downhills completely.</li>
+    </ul>
+  </div>
+
+  <details class="box">
+    <summary>Take slightly quicker steps (step rate)</summary>
+    <div class="body">
+      <p>Taking 5 to 10% more steps per minute, at the same pace, shortens your stride and reduces load on the knee. Try it on easy runs first.</p>
+      <ol class="steps">
+        <li><span>On a flat stretch during an easy run, count every footstrike (both feet) for 30 seconds.</span></li>
+        <li><span>Double it. That's your steps per minute. Example: 80 in 30 s = 160 per minute.</span></li>
+        <li><span>Add 5%. Example: 160 &times; 1.05 = 168 per minute.</span></li>
+        <li><span>Run to a metronome app or a watch beat set to the new number, for a few minutes at a time at first.</span></li>
+      </ol>
+      <p class="muted small">Change one thing at a time. Don't add the new step rate in the same week you add hills back.</p>
+    </div>
+  </details>
+
+  <details class="box">
+    <summary>If it flares up</summary>
+    <div class="body">
+      <p>Work down this list, one step at a time.</p>
+      <ol class="steps">
+        <li><span><strong>Cut steep downhills</strong> first: walk them or change the route.</span></li>
+        <li><span><strong>Shorten runs</strong> by about a third for a week.</span></li>
+        <li><span><strong>Swap a run</strong> for cycling, swimming or brisk walking.</span></li>
+        <li><span><strong>Still flaring after 2 weeks?</strong> <a href="#checked">Get it checked.</a></span></li>
+      </ol>
+      <p>Don't make up missed runs. And keep any single run within about 10% of your longest run in the past month. Example: if your longest recent run was 16 km, keep the next long run to about 17.5 km or less. Big jumps in a single run are a stronger warning sign than weekly totals.</p>
+    </div>
+  </details>
+
+  <details class="box" id="downhill-return">
+    <summary>Bringing downhills back (stage 3)</summary>
+    <div class="body">
+      <p>Start only when Build feels comfortable. Each step should pass the pain rule for a week before the next.</p>
+      <ol class="steps">
+        <li><span>Gentle downhill walking after a run, 5 to 10 minutes.</span></li>
+        <li><span>4 to 6 short downhill runs of 60 to 80 m on a gentle slope, grass if possible, walking back up.</span></li>
+        <li><span>Gentle downhill sections inside easy runs.</span></li>
+        <li><span>Steeper descents, a few at a time.</span></li>
+      </ol>
+      <p class="muted small">Increase only one of these each week: steepness, length, or speed.</p>
+    </div>
+    <a class="video inline-video" href="https://www.youtube.com/results?search_query=downhill+running+technique+short+quick+steps" target="_blank" rel="noopener noreferrer">
+      <span class="play" aria-hidden="true"></span><span>Downhill technique videos</span><span class="ext">YouTube</span>
+    </a>
+  </details>
+</section>
+
+<!-- ======================= EXERCISES ======================= -->
+<section id="exercises" aria-labelledby="h-ex">
+  <h2 id="h-ex">Exercises</h2>
+  <p class="sec-intro">Do them in this order. Numbers 1 to 3 are the core. Everyone does these imperfectly at first, which is normal. Go slowly, and read "Common mistakes" once in your first week.</p>
+
+  <div class="gloss">
+    <h3>Reading the doses</h3>
+    <dl>
+      <dt>Rep</dt><dd>One complete movement, down and back up.</dd>
+      <dt>Set</dt><dd>A group of reps done without stopping. <span class="eg">3 &times; 10</span> means 3 sets of 10 reps, with a rest between sets.</dd>
+      <dt>Hold</dt><dd>Stay still in position for the time shown. <span class="eg">5 &times; 30 s</span> means five 30-second holds.</dd>
+      <dt>Rest</dt><dd>About 60 seconds between sets or holds, unless the card says otherwise.</dd>
+      <dt>Each leg</dt><dd>Do all the sets on one leg, then all on the other.</dd>
+      <dt>How hard</dt><dd>Finish each set feeling you could do 1 to 3 more good reps. If you could do 5 or more, make it harder next time.</dd>
+      <dt>Weight</dt><dd>A backpack with books or water bottles. 1 litre of water weighs 1 kg. Start with 3 to 5 kg and add about 2 kg when it feels easy.</dd>
+    </dl>
+  </div>
+
+  <!-- 1. WALL SIT -->
+  <article class="ex" id="ex-wall">
+    <div class="ex-head">
+      <div class="ex-top"><span class="ex-num">1</span><span class="tag core">Core</span></div>
+      <h3>Wall sit</h3>
+      <p class="why">Strengthens the front of the thighs, which take strain off the back of the knee on downhills. The easiest one to start with.</p>
+      <dl class="dose">
+        <div><dt>Settle</dt><dd>5 &times; 30 s hold</dd></div>
+        <div><dt>Build</dt><dd>4 &times; 45 s hold</dd></div>
+        <div><dt>Rest</dt><dd>60 s</dd></div>
+      </dl>
+    </div>
+    <details class="how">
+      <summary>How to do it</summary>
+      <div class="how-body">
+        <div class="part">
+          <h4>Set up</h4>
+          <p>Find a clear, smooth wall. Wear shoes or stand on a non-slip floor. Stand with your back against the wall, then walk your feet out so your heels are about 40 to 50 cm from it (roughly two shoe lengths). Feet hip-width apart, about two fists between them. Toes pointing straight ahead.</p>
+        </div>
+        <div class="part">
+          <h4>Steps</h4>
+          <ol class="steps">
+            <li><span>Press your whole back lightly against the wall.</span></li>
+            <li><span>Slide down slowly until your knees are bent about halfway to a chair-sitting position. Your thighs should slope downward, not be level with the floor.</span></li>
+            <li><span>Look down. Your knees should be above your ankles, or just behind your toes. If they're past your toes, walk your feet a little further out.</span></li>
+            <li><span>Hands on your hips or hanging by your sides. Don't push on your thighs.</span></li>
+            <li><span>Breathe normally and hold for the set time.</span></li>
+            <li><span>Slide back up the wall to finish. Rest, then repeat.</span></li>
+          </ol>
+        </div>
+        <div class="note ok">
+          <h4>What to feel</h4>
+          <p>A growing burn in the front of both thighs by the end of each hold. At the back of the knee: nothing, or a mild ache no higher than 3/10.</p>
+        </div>
+        <div class="part">
+          <h4>Common mistakes</h4>
+          <ul class="mist">
+            <li>Going too low on day one. Higher is gentler on the knee. Depth comes later.</li>
+            <li>Feet too close to the wall, so the knees slide past the toes.</li>
+            <li>Toes turned out. This twists the shin and loads the sore spot.</li>
+            <li>Knees falling inward. Keep each knee in line with your second toe.</li>
+            <li>Holding your breath.</li>
+          </ul>
+        </div>
+        <div class="eh">
+          <div><h4>Make it easier</h4><ul><li>Sit higher on the wall.</li><li>Shorter holds (20 s).</li><li>Longer rests.</li></ul></div>
+          <div><h4>Make it harder (one at a time)</h4><ul><li>Slide a little lower, but never below chair height.</li><li>Shift more weight onto one leg.</li><li>Rest a loaded backpack on your thighs.</li></ul></div>
+        </div>
+        <div class="timer" data-timer>
+          <span class="t-label">Hold timer</span>
+          <span class="t-out" aria-live="off">0:30</span>
+          <span class="t-phase">5 s to get into position, then a beep</span>
+          <button type="button" data-secs="30">30 s</button>
+          <button type="button" data-secs="45">45 s</button>
+          <button type="button" class="t-stop" hidden>Stop</button>
+        </div>
+      </div>
+    </details>
+    <a class="video" href="https://www.youtube.com/results?search_query=wall+sit+exercise+correct+form+beginner" target="_blank" rel="noopener noreferrer">
+      <span class="play" aria-hidden="true"></span><span>Watch videos</span><span class="ext">YouTube</span>
+    </a>
+  </article>
+
+  <!-- 2. BAND SHIN TURN -->
+  <article class="ex" id="ex-band">
+    <div class="ex-head">
+      <div class="ex-top"><span class="ex-num">2</span><span class="tag core">Core</span></div>
+      <h3>Band shin turn</h3>
+      <p class="why">Works the sore tendon directly. The popliteus turns the shin slightly inward to "unlock" the knee as it bends. This exercise loads exactly that movement.</p>
+      <dl class="dose">
+        <div><dt>Settle</dt><dd>5 &times; 20&ndash;30 s hold, each leg</dd></div>
+        <div><dt>Build</dt><dd>3 &times; 12&ndash;15 slow reps, each leg</dd></div>
+        <div><dt>Speed</dt><dd>3 s in, 3 s back</dd></div>
+      </dl>
+    </div>
+    <details class="how">
+      <summary>How to do it</summary>
+      <div class="how-body">
+        <div class="part">
+          <h4>You need</h4>
+          <p>A resistance band, a heavy table or bed leg, a firm chair, and a towel or a sock on a smooth floor.</p>
+        </div>
+        <div class="part">
+          <h4>Set up</h4>
+          <p>Tie one end of the band around the table or bed leg, close to the floor. Sit on the chair beside it so the anchor is on the <strong>outside</strong> of the leg you're working. For the right leg, the anchor is on your right.</p>
+          <p>Sit back so your thigh is fully on the seat, knee bent at a right angle. Put your foot on the folded towel (or wear a sock) so it can pivot. Loop the other end of the band around the front half of your foot, just behind the toes. Shuffle the chair until the band is lightly tight with your toes pointing straight ahead.</p>
+        </div>
+        <div class="part">
+          <h4>Steps</h4>
+          <ol class="steps">
+            <li><span>Rest one hand on top of your thigh, just above the knee, to keep the thigh still.</span></li>
+            <li><span>Keep your heel on the floor. It's the pivot and doesn't move.</span></li>
+            <li><span>Turn your whole lower leg so your toes swing inward against the band, like a windscreen wiper. The toes travel only about a hand's width.</span></li>
+            <li><span><strong>Settle:</strong> hold there for the set time. <strong>Build:</strong> pause for 1 second, then let the toes travel back out slowly over 3 seconds.</span></li>
+            <li><span>Finish all sets, then move the chair to the other side of the anchor and do the other leg.</span></li>
+          </ol>
+        </div>
+        <div class="note ok">
+          <h4>What to feel</h4>
+          <p>A deep working feeling at the back-outer part of the knee. A mild ache there, up to 3/10, is expected. You shouldn't feel it mainly in your ankle or arch.</p>
+        </div>
+        <div class="note warn">
+          <h4>Quick check</h4>
+          <p>If the band is pulling your toes <em>inward</em>, the anchor is on the wrong side. Move the chair.</p>
+        </div>
+        <div class="part">
+          <h4>Common mistakes</h4>
+          <ul class="mist">
+            <li>Rolling the foot onto its outer edge or turning the sole up. That's the ankle working. Keep the sole flat.</li>
+            <li>Letting the thigh roll or the kneecap swing. Only the shin turns. Your hand on the thigh tells you.</li>
+            <li>Lifting the heel.</li>
+            <li>A band so strong the movement is jerky. Use a lighter band or move the chair closer.</li>
+            <li>Rushing the return. The slow 3 seconds back is half the exercise.</li>
+          </ul>
+        </div>
+        <div class="eh">
+          <div><h4>Make it easier</h4><ul><li>Less band tension (move the chair closer).</li><li>A smaller turn.</li><li>Fewer reps.</li></ul></div>
+          <div><h4>Make it harder (one at a time)</h4><ul><li>More tension (move the chair further).</li><li>A stronger band.</li><li>Add one set with your foot on a thick book or low stool, so the knee is straighter. This muscle works hardest near a straight knee.</li></ul></div>
+        </div>
+        <div class="timer" data-timer>
+          <span class="t-label">Hold timer (Settle)</span>
+          <span class="t-out" aria-live="off">0:20</span>
+          <span class="t-phase">5 s to get into position, then a beep</span>
+          <button type="button" data-secs="20">20 s</button>
+          <button type="button" data-secs="30">30 s</button>
+          <button type="button" class="t-stop" hidden>Stop</button>
+        </div>
+      </div>
+    </details>
+    <a class="video" href="https://www.youtube.com/results?search_query=seated+tibial+internal+rotation+resistance+band+exercise" target="_blank" rel="noopener noreferrer">
+      <span class="play" aria-hidden="true"></span><span>Watch videos</span><span class="ext">YouTube</span>
+    </a>
+  </article>
+
+  <!-- 3. SIDE STEP-DOWN -->
+  <article class="ex" id="ex-step">
+    <div class="ex-head">
+      <div class="ex-top"><span class="ex-num">3</span><span class="tag core">Core</span></div>
+      <h3>Side step-down</h3>
+      <p class="why">Builds thigh and hip strength and knee control on one leg, the way you land when running. The slow lowering does the work.</p>
+      <dl class="dose">
+        <div><dt>Settle</dt><dd>2 &times; 8 each leg, low step</dd></div>
+        <div><dt>Build</dt><dd>3 &times; 8&ndash;12 each leg</dd></div>
+        <div><dt>Speed</dt><dd>3 s down, 2 s up</dd></div>
+      </dl>
+    </div>
+    <details class="how">
+      <summary>How to do it</summary>
+      <div class="how-body">
+        <div class="part">
+          <h4>You need</h4>
+          <p>The bottom stair or a sturdy step, 15 to 20 cm high, next to a rail or wall.</p>
+        </div>
+        <div class="part">
+          <h4>Set up</h4>
+          <p>Stand side-on on the step, on the leg you're working, with that whole foot on the step near the edge. The other foot hangs in the air off the side of the step. Hold the rail or touch the wall lightly for balance.</p>
+        </div>
+        <div class="part">
+          <h4>Steps</h4>
+          <ol class="steps">
+            <li><span>Stand tall, standing knee soft (not locked).</span></li>
+            <li><span>Push your hips back a little, as if starting to sit, and bend the standing knee.</span></li>
+            <li><span>Lower slowly, counting 3 seconds, until the heel of the hanging foot just touches the floor. Put no weight on it.</span></li>
+            <li><span>Push down through the whole standing foot and rise over 2 seconds.</span></li>
+            <li><span>Stop just before the knee is fully straight, then start the next rep.</span></li>
+          </ol>
+        </div>
+        <div class="note ok">
+          <h4>What to feel</h4>
+          <p>The front of the thigh and the buttock of the standing leg. At the back of the knee: nothing, or up to 3/10.</p>
+        </div>
+        <div class="note warn">
+          <h4>Quick check</h4>
+          <p>Watch the standing knee. It should stay in line with your second toe and not drift inward. If it hurts above 3/10 in the Settle stage, skip this one until the knee calms down.</p>
+        </div>
+        <div class="part">
+          <h4>Common mistakes</h4>
+          <ul class="mist">
+            <li>The knee drifting inward, or the foot rolling in.</li>
+            <li>The hip dropping on the hanging-leg side. Keep both hips level, like headlights pointing forward.</li>
+            <li>Dropping fast instead of lowering over 3 seconds.</li>
+            <li>Resting weight on the floor foot at the bottom.</li>
+            <li>Snapping the knee straight at the top.</li>
+            <li>Pulling on the rail. It's for balance only.</li>
+          </ul>
+        </div>
+        <div class="eh">
+          <div><h4>Make it easier</h4><ul><li>A lower step, such as a thick book (about 10 cm).</li><li>Go only part of the way down.</li><li>More hand support.</li></ul></div>
+          <div><h4>Make it harder (one at a time)</h4><ul><li>A taller step (20 to 25 cm).</li><li>Wear a loaded backpack.</li><li>Lower even more slowly (4 to 5 s).</li></ul></div>
+        </div>
+      </div>
+    </details>
+    <a class="video" href="https://www.youtube.com/results?search_query=lateral+step+down+exercise+knee+form" target="_blank" rel="noopener noreferrer">
+      <span class="play" aria-hidden="true"></span><span>Watch videos</span><span class="ext">YouTube</span>
+    </a>
+  </article>
+
+  <!-- 4. HEEL-ON-CHAIR BRIDGE -->
+  <article class="ex" id="ex-bridge">
+    <div class="ex-head">
+      <div class="ex-top"><span class="ex-num">4</span><span class="tag opt">Optional</span></div>
+      <h3>Heel-on-chair bridge</h3>
+      <p class="why">Strengthens the hamstrings (back of the thigh), whose tendons pass the back of the knee, plus the buttocks. Most useful if the pain sits more at the back than the outer side.</p>
+      <dl class="dose">
+        <div><dt>Settle</dt><dd>3 &times; 30 s hold, both legs</dd></div>
+        <div><dt>Build</dt><dd>3 &times; 8&ndash;10 slow reps, each leg</dd></div>
+        <div><dt>Speed</dt><dd>3 s down</dd></div>
+      </dl>
+    </div>
+    <details class="how">
+      <summary>How to do it</summary>
+      <div class="how-body">
+        <div class="part">
+          <h4>Set up</h4>
+          <p>Lie on your back on the floor with both heels on the edge of a chair or couch seat. Your knees should be only slightly bent, legs almost straight. Arms by your sides, palms down.</p>
+        </div>
+        <div class="part">
+          <h4>Steps</h4>
+          <ol class="steps">
+            <li><span>Tighten your stomach gently, as if bracing for a light poke.</span></li>
+            <li><span>Press your heels down into the seat and squeeze your buttocks.</span></li>
+            <li><span>Lift your hips until your shoulders, hips and knees form a straight line.</span></li>
+            <li><span><strong>Settle:</strong> hold there with both heels on the chair. <strong>Build:</strong> lift one leg off the chair, then raise and lower your hips on the other leg, taking 3 seconds to lower.</span></li>
+            <li><span>Lower your hips to the floor to finish.</span></li>
+          </ol>
+        </div>
+        <div class="note ok">
+          <h4>What to feel</h4>
+          <p>The back of the thighs and the buttocks working hard.</p>
+        </div>
+        <div class="part">
+          <h4>Common mistakes</h4>
+          <ul class="mist">
+            <li>Arching the lower back to push the hips higher. Stop at a straight line.</li>
+            <li>Pushing through a cramp. If a hamstring cramps, bend your knees more and try again.</li>
+            <li>Bouncing the hips off the floor between reps.</li>
+          </ul>
+        </div>
+        <div class="eh">
+          <div><h4>Make it easier</h4><ul><li>Bend the knees more.</li><li>Stay on two legs.</li></ul></div>
+          <div><h4>Make it harder (one at a time)</h4><ul><li>One leg.</li><li>Straighter knee.</li><li>A backpack resting on your hips.</li></ul></div>
+        </div>
+        <div class="timer" data-timer>
+          <span class="t-label">Hold timer (Settle)</span>
+          <span class="t-out" aria-live="off">0:30</span>
+          <span class="t-phase">5 s to get into position, then a beep</span>
+          <button type="button" data-secs="30">30 s</button>
+          <button type="button" class="t-stop" hidden>Stop</button>
+        </div>
+      </div>
+    </details>
+    <a class="video" href="https://www.youtube.com/results?search_query=single+leg+bridge+heels+on+bench+hamstring" target="_blank" rel="noopener noreferrer">
+      <span class="play" aria-hidden="true"></span><span>Watch videos</span><span class="ext">YouTube</span>
+    </a>
+  </article>
+
+  <!-- 5. BAND SIDE STEPS -->
+  <article class="ex" id="ex-side">
+    <div class="ex-head">
+      <div class="ex-top"><span class="ex-num">5</span><span class="tag opt">Optional</span><span class="tag cond">Core if past ITB or hip pain</span></div>
+      <h3>Band side steps</h3>
+      <p class="why">Strengthens the outer hip muscles that steady the knee. Make this a core exercise if you've had outer-thigh (ITB) pain or hip discomfort before.</p>
+      <dl class="dose">
+        <div><dt>Settle</dt><dd>2 &times; 10 steps each way</dd></div>
+        <div><dt>Build</dt><dd>3 &times; 15 steps each way</dd></div>
+        <div><dt>Rest</dt><dd>30&ndash;60 s</dd></div>
+      </dl>
+    </div>
+    <details class="how">
+      <summary>How to do it</summary>
+      <div class="how-body">
+        <div class="part">
+          <h4>Set up</h4>
+          <p>If your band is a long strip, tie the ends together to make a loop. Step into it and pull it up to just above your knees. Feet hip-width apart. Bend your knees and hips slightly, as if about to sit on a high stool. Chest up.</p>
+        </div>
+        <div class="part">
+          <h4>Steps</h4>
+          <ol class="steps">
+            <li><span>Step sideways with one foot, about 30 cm, against the band.</span></li>
+            <li><span>Bring the other foot back to hip-width. Don't let your feet touch.</span></li>
+            <li><span>Stay at the same slightly bent height the whole time.</span></li>
+            <li><span>Take the set number of steps one way, then the same number back.</span></li>
+          </ol>
+        </div>
+        <div class="note ok">
+          <h4>What to feel</h4>
+          <p>A burn on the outside of both hips and buttocks by the last few steps. Not outer-knee pain.</p>
+        </div>
+        <div class="part">
+          <h4>Common mistakes</h4>
+          <ul class="mist">
+            <li>Standing up tall. Stay slightly bent.</li>
+            <li>Feet touching, or knees caving together.</li>
+            <li>Rocking the body side to side to swing the leg out.</li>
+            <li>A band too light to feel anything by step 8 to 10.</li>
+          </ul>
+        </div>
+        <div class="eh">
+          <div><h4>Make it easier</h4><ul><li>Band above the knees.</li><li>Shorter steps.</li></ul></div>
+          <div><h4>Make it harder (one at a time)</h4><ul><li>Band around the ankles.</li><li>Band around the front of the feet.</li><li>A stronger band.</li></ul></div>
+        </div>
+        <div class="note warn">
+          <h4>If the outer hip itself hurts</h4>
+          <p>Especially when lying on that side at night: keep steps short, avoid sleeping on that side and crossing your legs, and <a href="#checked">get it checked</a>. Outer hip tendons need a slightly different plan.</p>
+        </div>
+      </div>
+    </details>
+    <a class="video" href="https://www.youtube.com/results?search_query=banded+lateral+walk+correct+form" target="_blank" rel="noopener noreferrer">
+      <span class="play" aria-hidden="true"></span><span>Watch videos</span><span class="ext">YouTube</span>
+    </a>
+  </article>
+</section>
+
+<!-- ======================= SOMETHING ELSE ======================= -->
+<section id="else" aria-labelledby="h-else">
+  <h2 id="h-else">Could it be something else?</h2>
+  <p class="sec-intro">This guide is built for popliteus tendon pain. If what you notice matches one of these instead, the plan changes a little.</p>
+
+  <div class="alt">
+    <span class="label">ITB-related pain</span>
+    <div class="row"><b>Signs</b><span>Outer side of the knee, on the bony bump a few centimetres above the joint. Often starts at a similar point in each run, especially downhill. Outer thigh or hip tightness.</span></div>
+    <div class="row"><b>Change</b><span>Make exercise 5 core. Be strict about downhills and sloped roads. See a physio if it isn't settling in 4 to 6 weeks.</span></div>
+  </div>
+  <div class="alt">
+    <span class="label">Cartilage cushion (meniscus)</span>
+    <div class="row"><b>Signs</b><span>Catching, clicking with pain, the knee getting stuck, giving way, swelling after runs, pain with twisting or deep squats.</span></div>
+    <div class="row"><b>Change</b><span>Avoid deep squats and twisting. <a href="#checked">Get it checked</a>, as a scan may be needed.</span></div>
+  </div>
+  <div class="alt">
+    <span class="label">Kneecap pain (patellofemoral)</span>
+    <div class="row"><b>Signs</b><span>Ache around or behind the kneecap. Worse with stairs, squats, or after sitting a long time.</span></div>
+    <div class="row"><b>Change</b><span>The same plan works well. Exercises 1, 3 and 5 matter most.</span></div>
+  </div>
+  <div class="alt">
+    <span class="label">Hamstring tendon</span>
+    <div class="row"><b>Signs</b><span>Back of the knee or lower back of the thigh. Hurts when bending the knee against resistance.</span></div>
+    <div class="row"><b>Change</b><span>Make exercise 4 core.</span></div>
+  </div>
+  <div class="alt">
+    <span class="label">Outer hip tendon</span>
+    <div class="row"><b>Signs</b><span>Outer hip pain, sore lying on that side, worse crossing the legs.</span></div>
+    <div class="row"><b>Change</b><span>Get it checked. Education plus a specific exercise plan works well for this.</span></div>
+  </div>
+</section>
+
+<!-- ======================= GET IT CHECKED ======================= -->
+<section id="checked" aria-labelledby="h-checked">
+  <h2 id="h-checked">When to get it checked</h2>
+
+  <div class="flag now">
+    <h3>Same day: emergency department or urgent GP</h3>
+    <ul>
+      <li>A hot, red, swollen knee, especially with fever or feeling unwell.</li>
+      <li>A swollen, warm, painful calf, especially after a long trip, surgery or illness. This can be a blood clot.</li>
+      <li>You can't put weight on the leg, or you felt a pop followed by swelling within hours.</li>
+    </ul>
+  </div>
+
+  <div class="flag soon">
+    <h3>Book a review within 1 to 2 weeks</h3>
+    <p>With a GP, physiotherapist or sports doctor if:</p>
+    <ul>
+      <li>The knee swells after runs.</li>
+      <li>It locks (gets stuck) or gives way.</li>
+      <li>It hurts at night or at rest.</li>
+      <li>You're limping, or it changes how you run.</li>
+      <li>Pain is rising week on week despite following this plan.</li>
+      <li>You get numbness, tingling, or pain running down the leg.</li>
+      <li>It isn't clearly better after 6 to 8 weeks of doing the plan.</li>
+    </ul>
+  </div>
+
+  <details class="box">
+    <summary>What tests might be done</summary>
+    <div class="body">
+      <ul class="dots">
+        <li><strong>An examination comes first.</strong> Pressing on specific spots and a few movement tests often narrow it down.</li>
+        <li><strong>Ultrasound</strong> is a good first scan for tendons around the knee. It's quick, inexpensive, and can compare both knees.</li>
+        <li><strong>MRI</strong> is better for the cartilage cushions (menisci) and joint surfaces, for locking or swelling, or if things aren't improving.</li>
+        <li><strong>X-ray</strong> mainly helps when a bone problem is suspected.</li>
+        <li>Scan changes are common in runners with no pain at all, so results need matching to your symptoms.</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+<!-- ======================= MORE DETAIL ======================= -->
+<section id="more" aria-labelledby="h-more">
+  <h2 id="h-more">More detail</h2>
+
+  <details class="box">
+    <summary>What usually doesn't help</summary>
+    <div class="body">
+      <ul class="dots">
+        <li><strong>Complete rest.</strong> Pain eases, then often returns when running restarts. Tendons need load to adapt.</li>
+        <li><strong>Knee braces and sleeves.</strong> No good evidence for these problems. A sleeve is fine if it simply feels comfortable.</li>
+        <li><strong>Kneecap taping.</strong> It can help kneecap pain in the short term, but doesn't target the back-outer knee.</li>
+        <li><strong>Hard foam rolling or stretching the sore spot.</strong> No proven benefit, and pressing on an irritable tendon can make it worse.</li>
+        <li><strong>Relying on pain tablets to get through runs.</strong> Pain is useful information here. Ask a GP or pharmacist about pain relief if you need it.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="box">
+    <summary>How sure are we?</summary>
+    <div class="body">
+      <p><strong>Popliteus tendon pain</strong> has no high-quality trials. The evidence is case reports, small case series and expert reviews, which mostly recommend thigh strengthening and physiotherapy. Most people improve without injections or surgery.</p>
+      <p>This plan borrows principles from better-studied tendons (Achilles, patellar):</p>
+      <ul class="dots">
+        <li>Programmes using heavier resistance with added weight tend to do better than light exercise.</li>
+        <li>Tendons adapt slowly. Changes take around 12 weeks of regular loading.</li>
+        <li>Slow lowering alone isn't better than other loading. How heavy matters more than the tempo.</li>
+        <li>Holds are a tolerable way to keep loading a sore tendon. They don't reliably give instant pain relief.</li>
+      </ul>
+      <p><strong>Step rate:</strong> lab studies show a 5 to 10% increase reduces load at the knee. <strong>Single-run jumps:</strong> in a large runner study, one run much longer than recent runs predicted injury better than weekly totals.</p>
+      <p><strong>Kneecap pain</strong> has strong evidence for hip and knee strengthening. <strong>ITB pain</strong> has low-quality evidence. Hip strengthening and load management are the usual approach.</p>
+    </div>
+  </details>
+
+  <details class="box">
+    <summary>Where the sore spot is</summary>
+    <div class="body">
+      <p>The popliteus starts on the outer side of the thigh bone, just above the knee joint, and runs diagonally across the back of the knee to the inner side of the shin bone. It's tender when pressed on the outer side of the knee, a little behind and above the joint line.</p>
+      <p>It turns the shin slightly inward to "unlock" a straight knee as it starts to bend, and stops the thigh bone sliding forward on the shin when you land going downhill. That's why downhills, stairs, and straightening the knee under load tend to provoke it.</p>
+      <p class="muted small">The ITB attaches very close by, on the bony bump of the thigh bone. The two can feel similar, which is why both are covered here.</p>
+    </div>
+  </details>
+
+  <details class="box">
+    <summary>Sources</summary>
+    <div class="body">
+      <ul class="refs">
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/20086537" target="_blank" rel="noopener noreferrer">Popliteus tendinitis: review of diagnosis and management.</a><span class="n">Recommends thigh strengthening and physiotherapy; most patients respond.</span></li>
+        <li><a href="https://jointdrs.org/full-text/1492" target="_blank" rel="noopener noreferrer">Isolated popliteus tendon injury: case report and literature review. Joint Dis Relat Surg.</a><span class="n">No high-level evidence; non-surgical and surgical care both reported with good results.</span></li>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6122944" target="_blank" rel="noopener noreferrer">Popliteus tendon rupture managed without surgery in a professional athlete.</a><span class="n">Rehab progressed from wall sits to wall squats.</span></li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10579176/" target="_blank" rel="noopener noreferrer">Effect of resistance exercise dose components for tendinopathy management. Br J Sports Med 2023.</a><span class="n">91 studies. Higher intensity with external load associated with better outcomes.</span></li>
+        <li><a href="https://doi.org/10.1186/s40798-015-0009-9" target="_blank" rel="noopener noreferrer">Bohm S et al. Human tendon adaptation to mechanical loading. Sports Med Open 2015.</a><span class="n">High loads over 12+ weeks drive tendon adaptation.</span></li>
+        <li><a href="https://doi.org/10.1136/bmjsem-2020-000760" target="_blank" rel="noopener noreferrer">Clifford C et al. Isometric exercise for tendinopathy. BMJ Open Sport Exerc Med 2020.</a><span class="n">Holds not superior to moving exercise.</span></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Heiderscheit+step+rate+manipulation+joint+mechanics+running" target="_blank" rel="noopener noreferrer">Heiderscheit BC et al. Step rate manipulation and joint mechanics during running. Med Sci Sports Exerc 2011.</a><span class="n">PubMed search link.</span></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Frandsen+2025+running+injury+single+session+distance" target="_blank" rel="noopener noreferrer">Frandsen et al. Single-session running distance and injury. Br J Sports Med 2025.</a><span class="n">PubMed search link.</span></li>
+        <li><a href="https://doi.org/10.2519/jospt.2019.0302" target="_blank" rel="noopener noreferrer">Willy RW et al. Patellofemoral pain clinical practice guideline. JOSPT 2019.</a><span class="n">Hip plus knee exercise recommended; knee braces not recommended; taping short-term only.</span></li>
+        <li><a href="https://search.pedro.org.au/search-results/record-detail/54549" target="_blank" rel="noopener noreferrer">Collins NJ et al. Patellofemoral pain consensus statement. Br J Sports Med 2018.</a></li>
+        <li><a href="https://doi.org/10.3389/fspor.2024.1386456" target="_blank" rel="noopener noreferrer">Sanchez-Alvarado A et al. Conservative treatment of ITB syndrome in runners. Front Sports Act Living 2024.</a><span class="n">Few, small studies.</span></li>
+        <li><a href="https://doi.org/10.1016/j.clinbiomech.2012.03.002" target="_blank" rel="noopener noreferrer">Cambridge EDJ et al. Band placement and gluteal activation. Clin Biomech 2012.</a><span class="n">Moving the band lower increases hip muscle work.</span></li>
+        <li><a href="https://doi.org/10.1136/bmj.k1662" target="_blank" rel="noopener noreferrer">Mellor R et al. Education plus exercise for gluteal tendinopathy (LEAP trial). BMJ 2018.</a></li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+<footer>
+  <p><strong>Runner's Knee Guide v01</strong> &middot; 03/11/2026</p>
+  <p>General information for runners, not a diagnosis or personal medical advice. If you're unsure what's causing your pain, see a GP, physiotherapist or sports doctor.</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  "use strict";
+  var LEAD = 5;            // seconds to get into position
+  var active = null;
+  var ctx = null;
+
+  function beep(times){
+    try{
+      ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+      if(ctx.state === "suspended") ctx.resume();
+      for(var i = 0; i < times; i++){
+        var t0 = ctx.currentTime + i * 0.26;
+        var o = ctx.createOscillator(), g = ctx.createGain();
+        o.type = "sine"; o.frequency.value = 880;
+        g.gain.setValueAtTime(0.0001, t0);
+        g.gain.exponentialRampToValueAtTime(0.3, t0 + 0.01);
+        g.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.18);
+        o.connect(g); g.connect(ctx.destination);
+        o.start(t0); o.stop(t0 + 0.2);
+      }
+    }catch(e){}
+  }
+
+  function fmt(sec){
+    var s = Math.max(0, Math.ceil(sec));
+    return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
+  }
+
+  function setup(root){
+    var out = root.querySelector(".t-out");
+    var phase = root.querySelector(".t-phase");
+    var stopBtn = root.querySelector(".t-stop");
+    var defaultPhase = phase.textContent;
+    var T = { iv: 0, holdEnd: 0, startAt: 0, holding: false, secs: 0 };
+
+    function halt(message){
+      if(T.iv){ clearInterval(T.iv); T.iv = 0; }
+      root.classList.remove("running");
+      stopBtn.hidden = true;
+      phase.textContent = message || defaultPhase;
+      if(active === api) active = null;
+    }
+
+    function tick(){
+      var now = Date.now() / 1000;
+      if(!T.holding){
+        var lead = T.startAt - now;
+        if(lead <= 0){
+          T.holding = true;
+          T.holdEnd = T.startAt + T.secs;
+          beep(2);
+          phase.textContent = "Hold";
+        } else {
+          out.textContent = fmt(T.secs);
+          phase.textContent = "Get into position: " + Math.ceil(lead);
+          return;
+        }
+      }
+      var left = T.holdEnd - now;
+      if(left <= 0){
+        out.textContent = "0:00";
+        beep(3);
+        halt("Done. Rest, then tap again for the next hold.");
+        return;
+      }
+      out.textContent = fmt(left);
+    }
+
+    function start(secs){
+      if(active && active !== api) active.stop();
+      if(T.iv) clearInterval(T.iv);
+      active = api;
+      T.secs = secs;
+      T.holding = false;
+      T.startAt = Date.now() / 1000 + LEAD;
+      out.textContent = fmt(secs);
+      root.classList.add("running");
+      stopBtn.hidden = false;
+      beep(1);
+      T.iv = setInterval(tick, 200);
+      tick();
+    }
+
+    var api = { stop: function(){ halt(); } };
+
+    root.querySelectorAll("[data-secs]").forEach(function(b){
+      b.addEventListener("click", function(){ start(parseInt(b.getAttribute("data-secs"), 10)); });
+    });
+    stopBtn.addEventListener("click", function(){
+      halt();
+      var first = root.querySelector("[data-secs]");
+      if(first) out.textContent = fmt(parseInt(first.getAttribute("data-secs"), 10));
+    });
+    document.addEventListener("visibilitychange", function(){
+      if(document.visibilityState === "visible" && T.iv) tick();
+    });
+  }
+
+  document.querySelectorAll("[data-timer]").forEach(setup);
+})();
+</script>
