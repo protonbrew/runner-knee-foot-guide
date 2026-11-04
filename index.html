@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Runner's Knee Guide</title>
+<title>Runner's Knee &amp; Foot Guide</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="A phone-friendly exercise and running plan for pain at the back-outer corner of the knee in runners, with beginner instructions and when to get it checked.">
+<meta name="description" content="A phone-friendly plan for runners: knee exercises for pain at the back-outer corner of the knee, a year-round foot core routine, running rules, and when to get it checked.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@600;700&display=swap">
@@ -85,7 +85,7 @@ h3{font-size:1.35rem}
 
 /* ---------- brand line (scrolls away) ---------- */
 .brand .in > div{display:flex; align-items:baseline; justify-content:space-between; gap:1rem; padding-top:14px; padding-bottom:4px}
-.brand h1{font-size:1.55rem; letter-spacing:.01em}
+.brand h1{font-size:1.45rem; letter-spacing:.01em}
 .ver{font-size:.78rem; font-weight:700; color:var(--muted); font-variant-numeric:tabular-nums; white-space:nowrap}
 
 /* ---------- sticky tab bar ---------- */
@@ -131,6 +131,15 @@ body.with-bar main.in{padding-bottom:calc(96px + env(safe-area-inset-bottom, 0px
 .tile-t{font-family:var(--display); font-size:1.2rem; font-weight:700; line-height:1.1}
 .tile-s{font-size:.85rem; color:var(--muted); line-height:1.35}
 .tile.alert .tile-t{color:var(--stop)}
+.cta2{
+  display:flex; align-items:center; gap:.9rem; text-decoration:none; color:var(--ink);
+  background:var(--accent-soft); border-radius:16px; padding:.9rem 1rem;
+}
+.cta2 .cta-txt{gap:.1rem}
+.cta2 .cta-t{font-size:1.35rem; color:var(--ink)}
+.cta2 .cta-s{color:var(--muted); opacity:1}
+.cta2 .cta-go{width:2.5rem; height:2.5rem; background:var(--accent); color:var(--accent-ink)}
+.cta2 .cta-go svg{width:1.15rem; height:1.15rem}
 
 /* ---------- start: 1-minute version ---------- */
 .quick{background:var(--accent-soft); border-radius:18px; padding:1.25rem 1.15rem; display:flex; flex-direction:column; gap:1rem}
@@ -213,7 +222,7 @@ ol.steps li::before{
 /* ---------- exercises: picker ---------- */
 .ex-layout{display:flex; flex-direction:column; gap:.9rem}
 .picker-wrap{display:flex; flex-direction:column; gap:.5rem}
-.picker{display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); gap:6px}
+.picker{display:grid; grid-template-columns:repeat(6, minmax(0,1fr)); gap:5px}
 .pk{
   font:inherit; cursor:pointer; color:var(--ink);
   display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px;
@@ -224,8 +233,10 @@ ol.steps li::before{
 .pk .l{font-size:.7rem; font-weight:700; line-height:1.15; color:var(--muted); text-align:center}
 .pk .f{display:none}
 .pk.opt{border-style:dashed}
+.pk.foot{background:var(--accent-soft); border-color:transparent}
+.pk.foot .n{color:var(--accent)}
 .pk[aria-current]{background:var(--accent); border-color:var(--accent); border-style:solid; color:var(--accent-ink)}
-.pk[aria-current] .l{color:var(--accent-ink)}
+.pk[aria-current] .l, .pk[aria-current] .n{color:var(--accent-ink)}
 .picker-key{display:flex; flex-wrap:wrap; gap:.25rem .9rem; font-size:.82rem; color:var(--muted)}
 .picker-key b{color:var(--ink)}
 
@@ -252,6 +263,7 @@ details.gloss > .body{padding:0 1rem 1rem}
 .tag{font-size:.7rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase; padding:.22rem .55rem; border-radius:999px; line-height:1.3}
 .tag.core{background:var(--accent); color:var(--accent-ink)}
 .tag.opt{background:var(--sunk); color:var(--muted)}
+.tag.foot{background:var(--accent-soft); color:var(--accent)}
 .tag.ev{background:var(--surface); color:var(--ink); border:1px solid var(--line)}
 .why{color:var(--muted)}
 .dose{display:flex; flex-wrap:wrap; gap:.45rem}
@@ -281,6 +293,7 @@ ul.mist li::marker{color:var(--stop)}
 }
 .timer button.t-stop{background:var(--accent); color:var(--accent-ink)}
 .timer.running .t-out{color:var(--accent)}
+.timer .t-out.rest{color:var(--warn)}
 
 /* ---------- exercises: bottom action bar ---------- */
 .exbar{
@@ -338,6 +351,7 @@ body.with-bar footer.in{display:none}
 }
 @media (max-width: 370px){
   .tab{font-size:.84rem}
+  .pk .l{font-size:.64rem}
   .tiles{grid-template-columns:1fr}
   .alt .row, .gloss dl{grid-template-columns:1fr; gap:.1rem}
   .exbar .lbl-long{display:none}
@@ -350,8 +364,8 @@ body.with-bar footer.in{display:none}
 
 <header class="brand">
   <div class="in"><div>
-    <h1>Runner's Knee Guide</h1>
-    <span class="ver">v02 &middot; 03/11/2026</span>
+    <h1>Runner's Knee &amp; Foot Guide</h1>
+    <span class="ver">v03 &middot; 04/11/2026</span>
   </div></div>
 </header>
 
@@ -373,9 +387,18 @@ body.with-bar footer.in{display:none}
 
   <a class="cta" href="#exercises">
     <span class="cta-txt">
-      <span class="cta-k">Exercises</span>
+      <span class="cta-k">Knee exercises</span>
       <span class="cta-t">Start the 3 core exercises</span>
       <span class="cta-s">About 12 to 15 minutes, 2 to 3 times a week</span>
+    </span>
+    <span class="cta-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+  </a>
+
+  <a class="cta2" href="#foot-core">
+    <span class="cta-txt">
+      <span class="cta-k lbl">Every week, all year</span>
+      <span class="cta-t">Foot core</span>
+      <span class="cta-s">About 10 minutes, 3 times a week</span>
     </span>
     <span class="cta-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
   </a>
@@ -388,10 +411,12 @@ body.with-bar footer.in{display:none}
   <div class="quick">
     <h2>The 1-minute version</h2>
     <p>When the pain sits at the back-outer corner of the knee, the most likely cause is an irritated <strong>popliteus tendon</strong>: a small muscle and tendon there that works hard on downhills. Sore tendons get better with <strong>steady, gradually heavier exercise</strong>, not complete rest. Most people improve within 4 to 6 weeks, with full benefit by about 12 weeks.</p>
+    <p>Separately, a short <strong>foot core</strong> routine keeps the feet strong through marathon training. It has the best trial evidence of anything here for preventing running injuries.</p>
     <ol class="prio">
       <li><div><span class="when">Every run: follow the pain rule</span>Pain up to 3 out of 10 is fine. It should settle by the next morning. <a href="#pain-rule">How the rule works</a></div></li>
       <li><div><span class="when">On hills: go easy downhill</span>Uphills are usually fine. On steep downhills, take short quick steps or walk. <a href="#hills">Hill tips</a></div></li>
-      <li><div><span class="when">2 to 3 times a week: 3 exercises</span>Side step-down, wall sit, band side steps. Any days that suit. <a href="#exercises">Go to exercises</a></div></li>
+      <li><div><span class="when">2 to 3 times a week: 3 knee exercises</span>Side step-down, wall sit, band side steps. Any days that suit. <a href="#step-down">Go to knee exercises</a></div></li>
+      <li><div><span class="when">3 times a week, all year: foot core</span>10 minutes, barefoot. Do it on the same days as the knee exercises to keep it to one routine. <a href="#foot-core">Go to foot core</a></div></li>
     </ol>
     <div class="also">
       <p><strong>Get it checked</strong> if the knee swells, locks, gives way, hurts at night, or isn't clearly better after 6 to 8 weeks. <a href="#checks">Full list</a></p>
@@ -403,19 +428,19 @@ body.with-bar footer.in{display:none}
     <p class="intro">Pick the option that fits the week you're having. A busy week on the minimum still counts.</p>
     <div class="tiers">
       <div class="tier">
-        <div class="tier-top"><span class="name">Busy week</span><span class="meta">2 &times; ~12 min</span></div>
-        <p>Exercises 1, 2 and 3.</p>
+        <div class="tier-top"><span class="name">Busy week</span><span class="meta">~40 min a week</span></div>
+        <p>Knee 1, 2 and 3 twice. Foot core short version (5 min) 3 times.</p>
       </div>
       <div class="tier pick">
-        <div class="tier-top"><span class="name">Normal week</span><span class="meta">3 &times; 12&ndash;15 min</span></div>
-        <p>Exercises 1, 2 and 3.</p>
+        <div class="tier-top"><span class="name">Normal week</span><span class="meta">3 &times; ~25 min</span></div>
+        <p>Knee 1, 2 and 3, then foot core, 3 times a week.</p>
       </div>
       <div class="tier">
-        <div class="tier-top"><span class="name">Spare time</span><span class="meta">3 &times; ~20 min</span></div>
-        <p>All five. Only a few extra minutes? Add 5 first: it's the most specific.</p>
+        <div class="tier-top"><span class="name">Spare time</span><span class="meta">3 &times; ~30 min</span></div>
+        <p>Everything. Only a few extra minutes? Add knee 5 first: it's the most specific.</p>
       </div>
     </div>
-    <p class="note plain"><span><strong>Save time:</strong> alternate legs instead of resting, and do the side steps in the rests between wall-sit holds. Optional extra: 2 &times; 30 s wall sit before hilly runs.</span></p>
+    <p class="note plain"><span><strong>Save time:</strong> alternate legs instead of resting, and do the side steps in the rests between wall-sit holds. The seated foot exercises can be done in front of the TV. Optional extra: 2 &times; 30 s wall sit before hilly runs.</span></p>
 
     <details class="box">
       <summary>Fitting it around your runs</summary>
@@ -427,11 +452,12 @@ body.with-bar footer.in{display:none}
           <li><strong>Missed one?</strong> Skip it. Don't double up the next day.</li>
           <li><strong>Sore day</strong> (worse than usual that morning, or above 3/10): do the <em>Settle</em> dose only. Holds are gentle enough for sore days.</li>
           <li><strong>Do both legs every time,</strong> starting with the less sore leg so you learn the movement first.</li>
+          <li><strong>Foot core</strong> fits anywhere: after an easy run, on a rest day, or seated in the evening. Keep it going all year, including race week.</li>
         </ul>
       </div>
     </details>
 
-    <h3>Three stages</h3>
+    <h3>Knee: three stages</h3>
     <ol class="stages">
       <li>
         <span class="stage-name">Settle</span>
@@ -487,6 +513,7 @@ body.with-bar footer.in{display:none}
           <li><strong>4</strong> is partly guideline-based (hip extension). Its hamstring role is reasoning only.</li>
           <li><strong>5</strong> loads the sore tendon directly. It follows general tendon-loading principles, but no study has tested it.</li>
         </ul>
+        <p><strong>Foot core</strong> has the strongest trial in the guide, for a different job: in 118 runners, foot strengthening 3 times a week cut running injuries over a year from 33% to 14% compared with stretching. It's one trial with self-reported injuries, it used longer sessions than this 10-minute version, and no minimum dose has been worked out. Smaller studies looked at foot posture and running speed, not injury.</p>
         <p>General tendon research adds a few principles: heavier resistance with added weight tends to beat light exercise, tendons change over about 12 weeks, and holds are a tolerable way to keep loading but don't reliably give instant pain relief.</p>
         <p><strong>Step rate:</strong> lab studies show a 5 to 10% increase reduces load at the knee. <strong>Single-run jumps:</strong> in a large runner study, one run much longer than recent runs predicted injury better than weekly totals.</p>
       </div>
@@ -505,6 +532,9 @@ body.with-bar footer.in{display:none}
       <summary>Sources</summary>
       <div class="body">
         <ul class="refs">
+          <li><a href="https://search.pedro.org.au/search-results/record-detail/62997" target="_blank" rel="noopener noreferrer">Taddei UT et al. Foot core training to prevent running-related injuries: a randomised controlled trial. Am J Sports Med 2020.</a><span class="n">118 recreational runners. Injuries 14% vs 33% over 12 months.</span></li>
+          <li><a href="https://doi.org/10.1371/journal.pone.0157917" target="_blank" rel="noopener noreferrer">Sulowska I et al. Short foot exercises in long-distance runners. PLoS One 2016.</a><span class="n">Non-randomised. Foot posture and movement outcomes only.</span></li>
+          <li><a href="https://doi.org/10.1038/s41598-024-67525-5" target="_blank" rel="noopener noreferrer">Sulowska-Daszyk I et al. Foot muscle exercises and minimalist shoes in amateur runners. Sci Rep 2024.</a><span class="n">Lactate-threshold speed, no injury outcome.</span></li>
           <li><a href="https://pubmed.ncbi.nlm.nih.gov/20086537" target="_blank" rel="noopener noreferrer">Popliteus tendinitis: review of diagnosis and management.</a><span class="n">Recommends thigh strengthening and physiotherapy; most patients respond.</span></li>
           <li><a href="https://jointdrs.org/full-text/1492" target="_blank" rel="noopener noreferrer">Isolated popliteus tendon injury: case report and literature review. Joint Dis Relat Surg.</a><span class="n">No high-level evidence; non-surgical and surgical care both reported with good results.</span></li>
           <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6122944" target="_blank" rel="noopener noreferrer">Popliteus tendon rupture managed without surgery in a professional athlete.</a><span class="n">Rehab progressed from wall sits to wall squats.</span></li>
@@ -535,8 +565,9 @@ body.with-bar footer.in{display:none}
         <button class="pk" type="button" data-pick="2"><span class="n">3</span><span class="l">Side steps</span><span class="f">Band side steps</span></button>
         <button class="pk opt" type="button" data-pick="3"><span class="n">4</span><span class="l">Bridge</span><span class="f">Heel-on-chair bridge</span></button>
         <button class="pk opt" type="button" data-pick="4"><span class="n">5</span><span class="l">Shin turn</span><span class="f">Band shin turn</span></button>
+        <button class="pk foot" type="button" data-pick="5"><span class="n">F</span><span class="l">Foot core</span><span class="f">Foot core</span></button>
       </div>
-      <p class="picker-key"><span><b>1&ndash;3</b> core</span><span><b>4&ndash;5</b> optional</span><span>Best evidence first. Swipe or tap Next.</span></p>
+      <p class="picker-key"><span><b>1&ndash;3</b> knee core</span><span><b>4&ndash;5</b> optional</span><span><b>F</b> foot core, all year</span><span>Ranked by evidence. Swipe or tap Next.</span></p>
     </div>
 
     <div class="stage" id="ex-stage">
@@ -933,6 +964,121 @@ body.with-bar footer.in{display:none}
           </div>
         </details>
       </article>
+
+      <!-- F. FOOT CORE -->
+      <article class="ex" data-slug="foot-core" data-name="Foot core" data-video="short foot exercise toe yoga runners" aria-label="Foot core routine">
+        <div class="ex-head">
+          <div class="ex-title">
+            <span class="ex-n" aria-hidden="true">F</span>
+            <div>
+              <h2>Foot core</h2>
+              <div class="chips"><span class="tag foot">All year</span><span class="tag ev">Runner trial</span></div>
+            </div>
+          </div>
+          <p class="why">Four small exercises for the muscles inside the foot: short foot, toe yoga, toe splay and one-leg balance. In the only trial in runners, a programme like this cut running injuries by more than half over a year. It's a habit for the whole marathon build, not just while the knee is sore.</p>
+          <dl class="dose">
+            <div><dt>How often</dt><dd>3 times a week</dd></div>
+            <div><dt>Time</dt><dd>About 10 min</dd></div>
+            <div><dt>Short foot</dt><dd>3 &times; 10</dd></div>
+            <div><dt>Toe yoga</dt><dd>2 &times; 10</dd></div>
+            <div><dt>Toe splay</dt><dd>2 &times; 10</dd></div>
+            <div><dt>Balance</dt><dd>3 &times; 30 s each foot</dd></div>
+          </dl>
+        </div>
+        <div class="ex-body">
+          <div class="part">
+            <h3 class="lbl">You need</h3>
+            <p>Bare feet, a firm chair, and a wall or bench to touch for balance. Later, a folded towel and a cushion.</p>
+          </div>
+          <div class="part">
+            <h3 class="lbl">Four stages</h3>
+            <p>Everyone starts at stage 1, even if it feels too easy. Move up a stage after 2 sessions in a row where every rep is clean: toes stay long and the foot doesn't pull up at the ankle.</p>
+            <ol class="steps">
+              <li><span><strong>Seated:</strong> short foot, toe yoga and toe splay, sitting with both feet flat.</span></li>
+              <li><span><strong>Standing:</strong> the same three exercises standing on both feet. Add one-leg balance, 3 &times; 30 s each foot, eyes open.</span></li>
+              <li><span><strong>One foot:</strong> short foot while standing on one foot, 2 &times; 10 each foot. Balance with eyes closed, or standing on a folded towel.</span></li>
+              <li><span><strong>One-leg squat:</strong> hold the short foot through a slow quarter squat on one leg, 2 &times; 8 each foot. Balance on a cushion.</span></li>
+            </ol>
+          </div>
+          <div class="note warn">
+            <h3 class="lbl">Sore knee or heel</h3>
+            <p>While the knee is in the Settle stage, go no further than stage 3: the one-leg squat loads the knee. If your heel or a foot bone hurts, stay on stage 1 (seated) and see the Checks tab.</p>
+          </div>
+          <div class="part">
+            <h3 class="lbl">1. Short foot</h3>
+            <ol class="steps">
+              <li><span>Sit with your foot flat on the floor, toes relaxed and long.</span></li>
+              <li><span>Without curling your toes, slide the ball of your foot toward your heel so the arch lifts up. Only the sole of your foot works.</span></li>
+              <li><span>Your toes stay flat on the floor. They don't grip, curl or lift.</span></li>
+              <li><span>Hold for 5 seconds, then relax for 5 seconds. That's one rep. Do 10 reps, rest, and repeat for 3 sets.</span></li>
+            </ol>
+          </div>
+          <div class="part">
+            <h3 class="lbl">2. Toe yoga</h3>
+            <ol class="steps">
+              <li><span>Feet flat. Lift only your big toe while the other four toes stay pressed into the floor. Hold for 2 seconds, then lower.</span></li>
+              <li><span>Now press your big toe down and lift the other four. Hold for 2 seconds, then lower. That's one rep.</span></li>
+              <li><span>Do 2 sets of 10. If the small toes won't lift by themselves yet, help them with a finger for the first week or two. That's normal.</span></li>
+            </ol>
+          </div>
+          <div class="part">
+            <h3 class="lbl">3. Toe splay</h3>
+            <ol class="steps">
+              <li><span>Spread all five toes as wide as you can, like a fan opening.</span></li>
+              <li><span>Hold for 5 seconds, then relax for 5 seconds. Do 10 reps, rest, then a second set of 10.</span></li>
+            </ol>
+          </div>
+          <div class="part">
+            <h3 class="lbl">4. One-leg balance (from stage 2)</h3>
+            <ol class="steps">
+              <li><span>Stand next to a wall. Lift one foot and stand on the other, knee slightly bent.</span></li>
+              <li><span>Hold a gentle short foot: arch up, toes long and relaxed.</span></li>
+              <li><span>Hold for 30 seconds, then switch feet. Do 3 rounds.</span></li>
+              <li><span>Make it harder only once it's steady: eyes closed, then a folded towel, then a cushion.</span></li>
+            </ol>
+          </div>
+          <div class="note ok">
+            <h3 class="lbl">What to feel</h3>
+            <p>The small muscles in the sole of your foot working. It's subtle and won't burn. On the balance, you'll feel constant small wobbles and corrections in the foot and ankle. Most people can barely do short foot or toe yoga at first, and it usually takes 2 to 3 weeks to click.</p>
+          </div>
+          <div class="timer" data-timer>
+            <span class="t-label">Rep timer</span>
+            <span class="t-out" aria-live="off">0:05</span>
+            <span class="t-phase">Pick one. 5 s to get into position, then a beep</span>
+            <div class="t-btns">
+              <button type="button" data-plan="short-foot">Short foot 10 &times; 5 s</button>
+              <button type="button" data-plan="splay">Toe splay 10 &times; 5 s</button>
+              <button type="button" data-plan="balance">Balance 3 &times; 30 s each</button>
+              <button type="button" class="t-stop" hidden>Stop</button>
+            </div>
+          </div>
+        </div>
+        <details class="sub">
+          <summary>Common mistakes</summary>
+          <div class="body">
+            <ul class="mist">
+              <li>Curling the toes under. Only the arch lifts.</li>
+              <li>Pulling the foot up at the ankle. That's the shin muscle doing the work instead of the foot.</li>
+              <li>Toe yoga: rolling the foot or lifting the ankle. Only the toes move.</li>
+              <li>Moving up a stage before every rep of the current one is clean.</li>
+              <li>Giving up because it feels like nothing. The control comes with practice.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="sub">
+          <summary>Short on time</summary>
+          <div class="body">
+            <p>Do short foot and one-leg balance only, about 5 minutes. Doing it 3 times a week matters more than doing all four exercises.</p>
+          </div>
+        </details>
+        <details class="sub">
+          <summary>Why this exercise</summary>
+          <div class="body">
+            <p>In a randomised trial of 118 recreational runners, a foot-strengthening programme done 3 times a week led to fewer running injuries over 12 months: 14%, against 33% in a group who stretched. The gap appeared from about month 4, so it works as a long-term habit. Runners whose foot strength rose most stayed injury-free longest, which is why the routine moves through stages.</p>
+            <p>This is the strongest trial in the guide, but it's about preventing running injuries in general, not treating a sore knee. That's why it has its own slot instead of a place in the knee ranking. It's one trial with self-reported injuries, and its sessions were longer (about 20 to 30 minutes), so this is a shorter version chosen to fit a busy week.</p>
+          </div>
+        </details>
+      </article>
     </div>
   </div>
 </section>
@@ -1036,6 +1182,7 @@ body.with-bar footer.in{display:none}
       <h3>Book a review within 1 to 2 weeks</h3>
       <p>With a GP, physiotherapist or sports doctor if:</p>
       <ul>
+        <li><strong>Heel or foot bone pain:</strong> it hurts when you squeeze both sides of the heel, when you press one spot on a foot bone, or when you hop on that leg. <strong>Stop running until it's checked,</strong> as this can be an early bone stress injury.</li>
         <li>The knee swells after runs.</li>
         <li>It locks (gets stuck) or gives way.</li>
         <li>It hurts at night or at rest.</li>
@@ -1051,7 +1198,7 @@ body.with-bar footer.in{display:none}
         <ul class="dots">
           <li><strong>An examination comes first.</strong> Pressing on specific spots and a few movement tests often narrow it down.</li>
           <li><strong>Ultrasound</strong> is a good first scan for tendons around the knee. It's quick, inexpensive, and can compare both knees.</li>
-          <li><strong>MRI</strong> is better for the cartilage cushions (menisci) and joint surfaces, for locking or swelling, or if things aren't improving.</li>
+          <li><strong>MRI</strong> is better for the cartilage cushions (menisci) and joint surfaces, for locking or swelling, for suspected bone stress injuries (X-rays are often normal in the first few weeks), or if things aren't improving.</li>
           <li><strong>X-ray</strong> mainly helps when a bone problem is suspected.</li>
           <li>Scan changes are common in runners with no pain at all, so results need matching to your symptoms.</li>
         </ul>
@@ -1093,7 +1240,7 @@ body.with-bar footer.in{display:none}
 </main>
 
 <footer class="in">
-  <p class="fine">General information for runners, not a diagnosis or personal medical advice. If you're unsure what's causing your pain, see a GP, physiotherapist or sports doctor. Runner's Knee Guide v02, 03/11/2026.</p>
+  <p class="fine">General information for runners, not a diagnosis or personal medical advice. If you're unsure what's causing your pain, see a GP, physiotherapist or sports doctor. Runner's Knee &amp; Foot Guide v03, 04/11/2026.</p>
 </footer>
 
 <nav class="exbar" id="exbar" aria-label="Move between exercises" hidden>
@@ -1141,54 +1288,95 @@ body.with-bar footer.in{display:none}
     return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
   }
 
+  function plan(rounds, work, rest, wl, rl){
+    var o = [];
+    for(var i = 1; i <= rounds; i++){
+      o.push({ label: wl + " " + i + " of " + rounds, s: work });
+      if(i < rounds) o.push({ label: rl, s: rest, rest: true });
+    }
+    return o;
+  }
+  function sides(rounds, hold, swap, rest){
+    var o = [];
+    for(var i = 1; i <= rounds; i++){
+      o.push({ label: "Round " + i + " of " + rounds + ": first foot", s: hold });
+      o.push({ label: "Switch feet", s: swap, rest: true });
+      o.push({ label: "Round " + i + " of " + rounds + ": second foot", s: hold });
+      if(i < rounds) o.push({ label: "Rest", s: rest, rest: true });
+    }
+    return o;
+  }
+  var PLANS = {
+    "short-foot": function(){ return plan(10, 5, 5, "Hold", "Relax"); },
+    "splay": function(){ return plan(10, 5, 5, "Spread", "Relax"); },
+    "balance": function(){ return sides(3, 30, 5, 15); }
+  };
+  function phasesFor(btn){
+    var p = btn.getAttribute("data-plan");
+    if(p && PLANS[p]) return PLANS[p]();
+    return [{ label: "Hold", s: parseInt(btn.getAttribute("data-secs"), 10) }];
+  }
+
   function setupTimer(root){
     var out = root.querySelector(".t-out");
     var phase = root.querySelector(".t-phase");
     var stopBtn = root.querySelector(".t-stop");
-    var first = root.querySelector("[data-secs]");
+    var starters = root.querySelectorAll("[data-secs],[data-plan]");
+    var first = starters[0];
     var defaultPhase = phase.textContent;
-    var T = { iv: 0, holdEnd: 0, startAt: 0, holding: false, secs: 0 };
+    var T = { iv: 0, phases: [], i: 0, phaseEnd: 0, startAt: 0, started: false };
     var api;
 
+    function idle(){ if(first) out.textContent = fmt(phasesFor(first)[0].s); }
     function halt(message, keepDisplay){
       if(T.iv){ clearInterval(T.iv); T.iv = 0; }
       root.classList.remove("running");
+      out.classList.remove("rest");
       stopBtn.hidden = true;
       phase.textContent = message || defaultPhase;
-      if(!keepDisplay && first) out.textContent = fmt(parseInt(first.getAttribute("data-secs"), 10));
+      if(!keepDisplay) idle();
       if(activeTimer === api) activeTimer = null;
     }
     function tick(){
       var now = Date.now() / 1000;
-      if(!T.holding){
+      if(!T.started){
         var lead = T.startAt - now;
-        if(lead <= 0){
-          T.holding = true;
-          T.holdEnd = T.startAt + T.secs;
-          beep(2);
-          phase.textContent = "Hold";
-        } else {
-          out.textContent = fmt(T.secs);
+        if(lead > 0){
+          out.textContent = fmt(T.phases[0].s);
           phase.textContent = "Get into position: " + Math.ceil(lead);
           return;
         }
+        T.started = true; T.i = 0;
+        T.phaseEnd = T.startAt + T.phases[0].s;
+        beep(2);
       }
-      var left = T.holdEnd - now;
-      if(left <= 0){
-        out.textContent = "0:00";
-        beep(3);
-        halt("Done. Rest, then tap again for the next hold.", true);
-        return;
+      var moved = false;
+      while(now >= T.phaseEnd){
+        if(T.i >= T.phases.length - 1){
+          out.textContent = "0:00";
+          beep(3);
+          halt(T.phases.length > 1 ? "Done. Rest, then tap again for the next set." : "Done. Rest, then tap again for the next hold.", true);
+          return;
+        }
+        T.i++;
+        T.phaseEnd += T.phases[T.i].s;   /* carry overshoot so sets don't drift */
+        moved = true;
       }
-      out.textContent = fmt(left);
+      var ph = T.phases[T.i];
+      if(moved) beep(ph.rest ? 1 : 2);
+      phase.textContent = ph.label;
+      out.classList.toggle("rest", !!ph.rest);
+      out.textContent = fmt(T.phaseEnd - now);
     }
-    function start(secs){
+    function start(btn){
       if(activeTimer && activeTimer !== api) activeTimer.stop();
       if(T.iv) clearInterval(T.iv);
       activeTimer = api;
-      T.secs = secs; T.holding = false;
+      T.phases = phasesFor(btn);
+      T.started = false; T.i = 0;
       T.startAt = Date.now() / 1000 + LEAD;
-      out.textContent = fmt(secs);
+      out.classList.remove("rest");
+      out.textContent = fmt(T.phases[0].s);
       root.classList.add("running");
       stopBtn.hidden = false;
       beep(1);
@@ -1197,8 +1385,8 @@ body.with-bar footer.in{display:none}
     }
     api = { stop: function(){ halt(); }, running: function(){ return !!T.iv; } };
 
-    root.querySelectorAll("[data-secs]").forEach(function(b){
-      b.addEventListener("click", function(){ start(parseInt(b.getAttribute("data-secs"), 10)); });
+    Array.prototype.forEach.call(starters, function(b){
+      b.addEventListener("click", function(){ start(b); });
     });
     stopBtn.addEventListener("click", function(){ halt(); });
     document.addEventListener("visibilitychange", function(){
